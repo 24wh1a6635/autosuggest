@@ -6,62 +6,19 @@
     <title>Auto Suggest</title>
     <link rel="stylesheet" href="../css/index.css">
 </head>
-
-
-
 <body>
-    
     <div class="navbar">
-        <a href="">Home</a>
+        <a href="/">Home</a>
         <a href="/pages/card.html">Card</a>
         <a href="/pages/toggle.html">Toggle</a>
-        <a href="">Random User</a>
+        <a href="">Random Users</a>
     </div>
-
     <div class="card">
-        
-        <img id="userImage"
-        src="../images/john.png"
-        alt="User">
-        
-        <h2 id="userName">John</h2>
-        
-        <p id="userGender">Male</p>
-        
-        <button id="toggleBtn">Toggle</button>
-        
+        <img id="user-img" src="../images/john.png" alt="User Image">
+        <h2 id="user-name">John </h2>
+        <p id="user-gender">Male</p>
+        <button onclick="toggle()">Toggle</button>
     </div>
-    
-    <script>
-        
-        let isJohn = true;
-        
-        document.getElementById("toggleBtn")
-        .addEventListener("click", function(){
-            
-            const image = document.getElementById("userImage");
-            const name = document.getElementById("userName");
-            const gender = document.getElementById("userGender");
-            
-            if(isJohn){
-                
-                image.src = "../images/eww.jpg";
-                name.textContent = "Lisa";
-                gender.textContent = "Female";
-                
-            }else{
-                
-                image.src = "../images/john.png";
-                name.textContent = "John";
-                gender.textContent = "Male";
-            }
-            
-            isJohn = !isJohn;
-            
-        });
-        
-    </script>
-        <script src="../js/index.js"></script>
-
-</body>
+    <script src="../js/index.js"></script>
+    <script src="../js/toggle.js"></script>
 </html>
